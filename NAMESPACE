@@ -1,0 +1,7 @@
+import("stats")
+importFrom(BiasedUrn,pFNCHypergeo)
+export(bi1st,bi2st,bi2ste1,bi2ste2,bi2ste3,exp1st,fstretch,bi2wld_ni_del,
+       cf_reh_exact,cf_reh_midp,bi2by_ni_del,bi2by_ni_OR,mcnby_ni,bi2aeq1,bi2aeq2,bi2dipow,
+	   gofhwex_1s,gofhwex,mcnasc_ni,mcnby_ni_pp,mcnemasc,mcnempow,po_pbibe,postmys,powsign,
+	   bi2rlv1,bi2rlv2,tt1st,tt2st,pow_abe,gofind_t,gofsimpt,mawi,sgnrk,srktie_d,srktie_m,
+	   mwtie_fr,mwtie_xy,bi2diffac,bi2aeq3)
