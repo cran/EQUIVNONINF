@@ -6,7 +6,7 @@ indiP1K <- 0
 indiS6 <- 0
 
  
-if (2*K >= n || P2 == (1-P1))
+if (2*K >= n && P2 == (1-P1))
  { P1K <- pbinom(K,n,P1) - pbinom(K-1,n,P1)
    if (P1K >= alpha)
     { C1 <- K                                

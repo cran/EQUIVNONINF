@@ -1,10 +1,11 @@
 bi2ste3 <-
 function(m,n,eps,alpha,sw,tolrd,tol,maxh)   {
 
+outste3 <- tempfile()
 
 cat(" m = ",m,"   n = ",n,"   eps = ",eps,"   alpha = ",alpha,
     "\n","sw = ",sw,"   tolrd = ",tolrd,"   tol = ",tol,"   maxh = ",maxh,"\n",
-    file="ste3a.out",append=FALSE)
+    file=outste3,append=FALSE)
   
 
 fakl <- rep(0,2000)
@@ -43,13 +44,13 @@ for (is in 1:(nn-1))
 alph_0 <- alpha
 nhst <- 0
 size <- rejmax(m,n,eps,sw,tolrd,alph_0,fakl,hyp0)
-cat("\n","alph_0 =",alph_0,"   NHST =",nhst,"   SIZE =",size,file="ste3a.out",append=TRUE)
+cat("\n","alph_0 =",alph_0,"   NHST =",nhst,"   SIZE =",size,file=outste3,append=TRUE)
 
 while (size <= alpha)
      { alph_0 <- alph_0 + .01
        size <- rejmax(m,n,eps,sw,tolrd,alph_0,fakl,hyp0)
        cat("\n","alph_0 =",alph_0,"   NHST =",nhst,
-           "   SIZE =",size,file="ste3a.out",append=TRUE)  }
+           "   SIZE =",size,file=outste3,append=TRUE)  }
 
 nhst <- 0
 alph_1 <- alph_0 - .01
@@ -59,7 +60,7 @@ repeat
 {  nhst <- nhst + 1
    alph_0 <- (alph_1 + alph_2) / 2
    size <- rejmax(m,n,eps,sw,tolrd,alph_0,fakl,hyp0)
-   cat("\n","alph_0 =",alph_0,"   NHST =",nhst,"   SIZE =",size,file="ste3a.out",append=TRUE)
+   cat("\n","alph_0 =",alph_0,"   NHST =",nhst,"   SIZE =",size,file=outste3,append=TRUE)
    if (abs(size-alpha) < tol || nhst >= maxh) break
    if (abs(size-alpha) >= tol && nhst < maxh)
      { if (size > alpha && size < (alpha + 0.001) ) break  }
@@ -67,8 +68,8 @@ repeat
    if (size < alpha) alph_1 <- alph_0    }         
 
 size <- rejmax(m,n,eps,sw,tolrd,alph_0,fakl,hyp0)
-cat("\n","alph_0 =",alph_0,"   NHST =",nhst,"   SIZE =",size,file="ste3a.out",append=TRUE)
+cat("\n","alph_0 =",alph_0,"   NHST =",nhst,"   SIZE =",size,file=outste3,append=TRUE)
 
-file.show("ste3a.out")
+file.show(outste3)
 
   }

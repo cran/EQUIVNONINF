@@ -70,6 +70,6 @@ bi2aeq3(50,50,0.6667,1.5000,0.05,0.01,0.000001,0.0001,5)
 \keyword{binomial two-sample problem}
 \keyword{equivalence}
 \keyword{odds ratio}
-\keyword{exact Fisher-type test, nonrandomized version}
+\keyword{exact Fisher-type test nonrandomized version}
 \keyword{maximally raised nominal level}
 

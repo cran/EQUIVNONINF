@@ -34,7 +34,7 @@ Boca Raton: Chapman & Hall/CRC Press, 2010, \eqn{\S}{Par.} 11.3.3.}
 \author{Stefan Wellek <stefan.wellek@zi-mannheim.de> \cr
 Peter Ziegler <peter.ziegler@zi-mannheim.de>}
 \examples{                                     
-bi2rlv2(.6667,1.5,.05,.70,.50,.80,2.0)  }  
+bi2rlv2(.6667,1.5,.05,.70,.50,.50,2.0)  }  
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{binomial two-sample problem}

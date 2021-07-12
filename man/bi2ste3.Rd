@@ -69,6 +69,6 @@ Peter Ziegler <peter.ziegler@zi-mannheim.de>
 \keyword{binomial two-sample problem}
 \keyword{noninferiority}
 \keyword{odds ratio}
-\keyword{exact Fisher-type test, nonrandomized version}
+\keyword{exact Fisher-type test nonrandomized version}
 \keyword{maximally raised nominal level}
 
